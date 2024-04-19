@@ -19,7 +19,7 @@
         }
     ],
     "require": {
-        "php": ">8.2",
+        "php": ">8.1",
         "ovos/php-library": "dev-release/3.0"
     },
     "require-dev": {
