@@ -1,0 +1,51 @@
+{
+    "name": "ovos/webpack-manifest2",
+    "type": "library",
+    "description": "Processing webpack manifest.json files",
+    "homepage": "https://github.com/ovos/webpack-manifest",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Maciej Holyszko",
+            "email": "mh@ovos.at",
+            "homepage": "https://github.com/mh-ovos",
+            "role": "Developer"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git@github.com:ovos/php-library.git"
+        }
+    ],
+    "require": {
+        "php": ">8.2",
+        "ovos/php-library": "dev-release/3.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.x"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ovos\\Webpack\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ovos\\Webpack\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "check-style": "phpcs -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests",
+        "fix-style": "phpcbf -p --standard=PSR2 --runtime-set ignore_errors_on_exit 1 --runtime-set ignore_warnings_on_exit 1 src tests"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "2.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
